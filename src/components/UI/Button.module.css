@@ -1,0 +1,17 @@
+button {
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+  border-color: transparent;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.primary {
+  background-color: #9ccfbf;
+}
+
+.secondary {
+  background-color: #eca4b1;
+}

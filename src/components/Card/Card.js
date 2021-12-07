@@ -4,6 +4,8 @@ import { countActions } from "../../store/countSlice";
 
 import Button from "../UI/Button";
 
+import styles from "./Card.module.scss";
+
 function Card() {
   const dispatch = useDispatch();
 
@@ -18,7 +20,7 @@ function Card() {
   };
 
   return (
-    <div>
+    <div className={styles.card}>
       <h2>Count: {count}</h2>
 
       <Button title="+" color="primary" handleClick={addToCounter} />

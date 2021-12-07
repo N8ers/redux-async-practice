@@ -1,3 +1,5 @@
+@import "../../varriables.scss";
+
 button {
   height: 40px;
   width: 40px;
@@ -9,9 +11,9 @@ button {
 }
 
 .primary {
-  background-color: #9ccfbf;
+  background-color: $dark-green;
 }
 
 .secondary {
-  background-color: #eca4b1;
+  background-color: $dark-pink;
 }

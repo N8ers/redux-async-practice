@@ -21,6 +21,23 @@ export const fetchCount = () => {
   };
 };
 
-// export const sendCount = () => {
-//   console.log("SEND COUNT");
-// };
+export const sendCount = (count) => {
+  return async (dispatch) => {
+    const sendData = async () => {
+      const response = await fetch(process.env.REACT_APP_FIREBASE, {
+        method: "PUT",
+        body: JSON.stringify(count),
+      });
+
+      if (!response.ok) {
+        throw new Error("Sending Data Failed");
+      }
+    };
+
+    try {
+      await sendData();
+    } catch (error) {
+      console.log("ERROR: ", error);
+    }
+  };
+};

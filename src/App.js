@@ -3,10 +3,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 // store
-import {
-  fetchCount,
-  // sendCount
-} from "./store/countActions";
+import { fetchCount, sendCount } from "./store/countActions";
 
 // components
 import Card from "./components/Card/Card";
@@ -25,23 +22,17 @@ function App() {
     dispatch(fetchCount());
   }, [dispatch]);
 
-  // useEffect(() => {
-  //   if (isInitialLoad) {
-  //     isInitialLoad = false;
-  //     return;
-  //   }
+  useEffect(() => {
+    if (isInitialLoad) {
+      console.log("initial load");
+      isInitialLoad = false;
+      return;
+    }
 
-  //   dispatch(sendCount(count));
-  // }, [dispatch, count]);
+    console.log("useEffect: [dispatch, count]");
 
-  // useEffect(() => {
-  //   if (isInitialLoad) {
-  //     isInitialLoad = false;
-  //     return;
-  //   }
-
-  //   dispatch(sendCartData(cart));
-  // }, [cart, dispatch]);
+    dispatch(sendCount(count));
+  }, [dispatch, count]);
 
   return (
     <div className="App">

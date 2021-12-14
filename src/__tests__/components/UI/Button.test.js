@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Button from "./Button";
+import Button from "../../../components/UI/Button";
 
 describe("Greeting Component", () => {
   test("renders prop content", () => {
